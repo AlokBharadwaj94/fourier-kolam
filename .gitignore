@@ -1,0 +1,6 @@
+.venv
+.venv/*
+__pycache__
+__pycache__/*
+exports/*
+_studio_input.png
