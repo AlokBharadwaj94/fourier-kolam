@@ -12,3 +12,6 @@ Approximately representing fourier transform of an image as a Kolam
 1. Waring, T. M. (2012). Sequential encoding of Tamil kolam patterns. Forma, 27(1), 83-92.
 2. Yanagisawa, K. & Nagata, S. Fundamental study on design system of kolam pattern. Forma 22, 31–46 (2007).
 3. Sivakumar, S., Sivakumar, S. An algorithm for one-stroke kolam generation using a gating structure. npj Herit. Sci. 14, 144 (2026). https://doi.org/10.1038/s40494-026-02310-3
+
+
+Built with: Claude Opus 5
