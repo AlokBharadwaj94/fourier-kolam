@@ -10,13 +10,14 @@ The loop can be imagined as guided through 4 gates around each dot, as shown bel
 </picture>
 
 
+
+In this code, I try to encode the Fourier amplitudes of an image as a kolam pattern. This is done by considering the pulli grid as Fourier frequencies and the number of open gates around each dot as its amplitude. The amplitudes are quantised to levels 1 to 4 before being assigned to a dot. Level 0 is not allowed. Because of the chessboard rule above, the quantised amplitudes usually cannot be drawn exactly as they come out of the transform, so they are nudged by the smallest amount that makes a weave possible. 
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-from-numbers.svg">
   <img alt="A grid of levels and the single curve it produces" src="docs/kolam-from-numbers.svg" width="790">
 </picture>
 
-
-In this code, I try to encode the Fourier amplitudes of an image as a kolam pattern. This is done by considering the pulli grid as Fourier frequencies and the number of open gates around each dot as its amplitude. The amplitudes are quantised to levels 1 to 4 before being assigned to a dot. Level 0 is not allowed. Because of the chessboard rule above, the quantised amplitudes usually cannot be drawn exactly as they come out of the transform, so they are nudged by the smallest amount that makes a weave possible. 
 
 *Approximately representing the Fourier transform of an image as a kolam.*
 
