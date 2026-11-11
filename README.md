@@ -6,7 +6,7 @@ The loop can be imagined as guided through 4 gates around each dot, as shown bel
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-primitives.svg">
-  <img alt="The five kolam primitives, and the sealed dot that is not allowed" src="docs/kolam-primitives.png" width="790">
+  <img alt="The five kolam primitives, and the sealed dot that is not allowed" src="docs/kolam-primitives.svg" width="790">
 </picture>
 
 One thing to note: a gate sits *between* two dots, so it belongs to both of them. Opening a gate raises the level of both dots it joins. This means the levels cannot be chosen freely. Colour the pulli like a chessboard, and every gate joins a dark square to a light one — so the total of the levels on the dark squares has to equal the total on the light squares, or no weave exists at all.
