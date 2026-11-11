@@ -5,15 +5,15 @@ Kolam (rangoli) is a traditional South Indian form of line art, preserved by man
 The loop can be imagined as guided through 4 gates around each dot, as shown below. A gate is either open or closed. The loop passes straight through an open gate and gets diverted by a closed one. The number of open gates around a dot therefore decides the shape of the curve there, and I call that number its **level**. In the algorithm described in [3] the gating matrix is iteratively tuned so as to obtain a kolam in one stroke.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-primitives-dark.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-primitives.svg">
   <img alt="The five kolam primitives, and the sealed dot that is not allowed" src="docs/kolam-primitives.png" width="790">
 </picture>
 
 One thing to note: a gate sits *between* two dots, so it belongs to both of them. Opening a gate raises the level of both dots it joins. This means the levels cannot be chosen freely. Colour the pulli like a chessboard, and every gate joins a dark square to a light one — so the total of the levels on the dark squares has to equal the total on the light squares, or no weave exists at all.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-from-numbers-dark.png">
-  <img alt="A grid of levels and the single curve it produces" src="docs/kolam-from-numbers.png" width="790">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/kolam-from-numbers.svg">
+  <img alt="A grid of levels and the single curve it produces" src="docs/kolam-from-numbers.svg" width="790">
 </picture>
 
 In this code, I try to encode the Fourier amplitudes of an image as a kolam pattern. This is done by considering the pulli grid as Fourier frequencies and the number of open gates around each dot as its amplitude. The amplitudes are quantised to levels 1 to 4 before being assigned to a dot. Level 0 is not allowed: a dot with all four gates closed is sealed inside a ring of its own, belonging to no stroke at all. Because of the chessboard rule above, the quantised amplitudes usually cannot be drawn exactly as they come out of the transform, so they are nudged by the smallest amount that makes a weave possible. Pushing the result all the way to a single stroke costs a little more accuracy again — that is a choice left to you.
